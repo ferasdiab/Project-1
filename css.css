@@ -1,0 +1,65 @@
+.continer {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./nice-watercolor-background_24837-261.jpg");
+    background-size: cover;
+    background-position:center ;
+
+}
+
+
+.score {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+   
+}
+
+
+.Question {
+
+    width: 54%;
+    height: 200px;
+    margin: auto;
+
+
+}
+#QA {
+    font-size: x-large;
+    font-style: oblique;
+    color: rgb(36, 62, 109); ;
+}
+
+.multipul {
+    width: 70%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    margin-left: 35%;
+
+}
+
+.multi1, .multi2, .multi3, .multi4 {
+    display: flex;
+}
+
+
+
+
+
+.next {
+    width: 100px;
+    margin: auto;
+
+}
+
+button {
+    cursor: pointer;
+    margin: auto;
+    width: 60px;
+    height: 50px;
+    background: rgb(36, 62, 109);
+
+}
