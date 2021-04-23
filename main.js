@@ -47,7 +47,7 @@ const nextQA = () => {
 
 if (counter !== qu.length ){
 
- 
+    document.getElementById("button2").style.display = "inline-block";
 
 newQA.innerHTML = qu[counter].qu;
 
@@ -69,6 +69,8 @@ console.log( option2stats.value)
 console.log(option3stats.value )
 console.log(option4stats.value )
 console.log("end")
+
+document.getElementById("button1").style.display = "none";
 
 
 if ( counter === qu.length-1 ){
@@ -119,5 +121,9 @@ arrOfAnswer[3] === "true"  ) { ++theScore }
 
 
 console.log(theScore)
+
+document.getElementById("button2").style.display = "none";
+document.getElementById("button1").style.display = "inline-block";
+
 
 }

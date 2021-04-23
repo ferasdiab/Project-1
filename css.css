@@ -55,11 +55,15 @@
 
 }
 
-#button1, #button {
+#button1, #button2 {
     cursor: pointer;
     margin: auto;
     width: 60px;
     height: 50px;
     background: rgb(36, 62, 109);
 
+}
+
+#button2 {
+    display: none;
 }
