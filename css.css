@@ -55,7 +55,7 @@
 
 }
 
-button {
+#button1, #button {
     cursor: pointer;
     margin: auto;
     width: 60px;
