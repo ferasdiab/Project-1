@@ -1,16 +1,15 @@
 
+let q1 = "Now in what Hijri year we are  ?"
+let q2 = "World War II ended in which year ?"
+let q3 = "When did the Soviet economy collapse? ?"
+let q4 = "In what Hijri years did the Prophet Muhammad die ?"
+let q5 = "How old was the Prophet Muhammad when he died ? "
 
-let q1 = "What is the largest country in the world ?"
-let q2 = "Who Invented the Light Bulb ?"
-let q3 = "What is the longest river in the world ?"
-let q4 = "In what year was Javascript invented ?"
-let q5 = "What is the largest planet in the solar system"
-
-const qu = [{qu : q1 , miltiOption : { first : {name : "Russia" , stats : true} , second : {name : "China" , stats : false } , third : {name : "USA" , stats : false} , forth : { name : "Canada" , stats : false}} } ,
- {qu : q2 , miltiOption : {first : {name : "Nikola Tesla" , stats : false} , second : {name : "Joseph Swan" , stats : false} , third : {name : "Thomas Edison" , stats : true} , forth : {name : "Albert Einstein" , stats : false}}  } , 
- {qu : q3  , miltiOption: {first : {name : "Amazon River" , stats : false} , second : {name : "Mississippi River" , stats : false} , third : {name : "Yangtze River" , stats : false} , forth : {name : "Nile river" , stats : true}}} ,
-{qu : q4 , miltiOption : {first : {name : "1999" , stats : false} , second : {name : "1995" , stats : true} , third :{name : "1990" , stats : false}   , forth : {name : "2010" , stats : false}  } } ,
-{qu : q5 , miltiOption : {first : {name : "Earth" , stats : false} , second : {name : "Mars" , stats : false} , third :{name : "Jupiter" , stats : true}   , forth : {name : "Uranus " , stats : false}  } }   ]
+const qu = [{qu : q1 , miltiOption : { first : {name : "1430" , stats : false} , second : {name : "1442" , stats : true } , third : {name : "1440" , stats : false} , forth : { name : "1450" , stats : false}} } ,
+ {qu : q2 , miltiOption : {first : {name : "1944" , stats : false} , second : {name : "1919" , stats : false} , third : {name : "1935" , stats : false} , forth : {name : "1945" , stats : true}}  } , 
+ {qu : q3  , miltiOption: {first : {name : "1985" , stats : false} , second : {name : "1950" , stats : false} , third : {name : "1991" , stats : true} , forth : {name : "1980" , stats : false}}} ,
+{qu : q4 , miltiOption : {first : {name : "10" , stats : false} , second : {name : "11" , stats : true} , third :{name : "12" , stats : false}   , forth : {name : "13" , stats : false}  } } ,
+{qu : q5 , miltiOption : {first : {name : "60" , stats : false} , second : {name : "61" , stats : false} , third :{name : "62" , stats : false}   , forth : {name : "63 " , stats : true}  } }   ]
 
 
 let counter = 0
