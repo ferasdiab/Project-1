@@ -3,12 +3,14 @@
 let q1 = "What is the largest country in the world ?"
 let q2 = "Who Invented the Light Bulb ?"
 let q3 = "What is the longest river in the world ?"
-let q4 = "In what year was Javascript invented"
+let q4 = "In what year was Javascript invented ?"
+let q5 = "What is the largest planet in the solar system"
 
 const qu = [{qu : q1 , miltiOption : { first : {name : "Russia" , stats : true} , second : {name : "China" , stats : false } , third : {name : "USA" , stats : false} , forth : { name : "Canada" , stats : false}} } ,
  {qu : q2 , miltiOption : {first : {name : "Nikola Tesla" , stats : false} , second : {name : "Joseph Swan" , stats : false} , third : {name : "Thomas Edison" , stats : true} , forth : {name : "Albert Einstein" , stats : false}}  } , 
  {qu : q3  , miltiOption: {first : {name : "Amazon River" , stats : false} , second : {name : "Mississippi River" , stats : false} , third : {name : "Yangtze River" , stats : false} , forth : {name : "Nile river" , stats : true}}} ,
-{qu : q4 , miltiOption : {first : {name : "1999" , stats : false} , second : {name : "1995" , stats : true} , third :{name : "1990" , stats : false}   , forth : {name : "2010" , stats : false}  } }  ]
+{qu : q4 , miltiOption : {first : {name : "1999" , stats : false} , second : {name : "1995" , stats : true} , third :{name : "1990" , stats : false}   , forth : {name : "2010" , stats : false}  } } ,
+{qu : q5 , miltiOption : {first : {name : "Earth" , stats : false} , second : {name : "Mars" , stats : false} , third :{name : "Jupiter" , stats : true}   , forth : {name : "Uranus " , stats : false}  } }   ]
 
 
 let counter = 0
@@ -82,7 +84,7 @@ console.log("end")
 document.getElementById("button1").style.display = "none";
 
 if (counter === 0) {
-    let timer = 60 
+    let timer = 60
 const timeDown = setInterval(function(){
 
     document.getElementById("timer").innerHTML = `${timer} second left`
@@ -146,6 +148,8 @@ const chick = () => {
     (document.getElementsByName("a")[1].checked) === true || (document.getElementsByName("a")[2].checked) === true 
     || (document.getElementsByName("a")[3].checked) === true ){
 
+
+
 const arrOfAnswer = [option1stats.value , option2stats.value
 , option3stats.value  , option4stats.value]
 
@@ -160,6 +164,8 @@ arrOfAnswer[2] === "true"  ) { ++theScore }
 
 if ((document.getElementsByName("a")[3].checked) === true &&
 arrOfAnswer[3] === "true"  ) { ++theScore }
+
+
 
 
 if ((document.getElementsByName("a")[0].checked) === true){
@@ -216,6 +222,11 @@ for (let i = 0 ; i < arrOfAnswer.length ; i++){
         document.getElementById(`first${i+1}muil`).style.transition = "2s"
     }
 }
+
+document.getElementsByName("a")[0].checked = false
+document.getElementsByName("a")[1].checked = false
+document.getElementsByName("a")[2].checked = false
+document.getElementsByName("a")[3].checked = false
 
 
 document.getElementById("button2").style.display = "none";
