@@ -49,6 +49,18 @@ if (counter !== qu.length ){
 
     document.getElementById("button2").style.display = "inline-block";
 
+    document.getElementById("first1muil").style.background = "#6a94e4"
+    document.getElementById("first2muil").style.background = "#6a94e4"
+    document.getElementById("first3muil").style.background = "#6a94e4"
+    document.getElementById("first4muil").style.background = "#6a94e4"
+
+    document.getElementById("first1muil").style.transition = "0s"
+    document.getElementById("first2muil").style.transition = "0s"
+    document.getElementById("first3muil").style.transition = "0s"
+    document.getElementById("first4muil").style.transition = "0s"
+
+
+
 newQA.innerHTML = qu[counter].qu;
 
 newOption1.innerText = qu[counter].miltiOption.first.name;
@@ -72,6 +84,37 @@ console.log("end")
 
 document.getElementById("button1").style.display = "none";
 
+if (counter === 0) {
+    let timer = 60 
+const timeDown = setInterval(function(){
+
+    document.getElementById("timer").innerHTML = `${timer} second left`
+    
+    --timer
+    
+    if (timer < 0 ){
+        clearInterval(timeDown);
+    
+        body.remove();
+        score.innerHTML = `${theScore} OF ${qu.length}`
+        document.getElementById("result").style.position = "relative";
+        document.getElementById("result").style.top = "50%";
+        document.getElementById("result").style.width = "350px"
+        document.getElementById("result").style.height = "100px"
+        document.getElementById("result").style.background = "rgb(36, 62, 109)"
+        document.getElementById("result").style.margin = "90px 0px 69px 160px"
+        document.getElementById("result").style.padding = "10px"
+        document.getElementById("result").style.border = "2px solid"
+        document.getElementById("result").style.textAlign = "center"
+    
+        document.getElementById("timer").remove();
+    }
+    
+     }, 1000);
+}
+
+
+
 
 if ( counter === qu.length-1 ){
     buttonstats.innerText = "Finish"
@@ -87,6 +130,12 @@ if ( counter === qu.length-1 ){
     document.getElementById("result").style.width = "350px"
     document.getElementById("result").style.height = "100px"
     document.getElementById("result").style.background = "rgb(36, 62, 109)"
+    document.getElementById("result").style.margin = "90px 0px 69px 160px"
+    document.getElementById("result").style.padding = "10px"
+    document.getElementById("result").style.border = "2px solid"
+    document.getElementById("result").style.textAlign = "center"
+
+    document.getElementById("timer").remove();
 
 
 
@@ -120,7 +169,54 @@ if ((document.getElementsByName("a")[3].checked) === true &&
 arrOfAnswer[3] === "true"  ) { ++theScore }
 
 
-console.log(theScore)
+if ((document.getElementsByName("a")[0].checked) === true){
+    if (arrOfAnswer[0] === "true" ) {
+        document.getElementById("first1muil").style.background = "#228B22"
+        document.getElementById("first1muil").style.transition = "2s"
+    } else {document.getElementById("first1muil").style.background = "#B22222"
+    document.getElementById("first1muil").style.transition = "2s"
+
+}
+}
+
+
+if ((document.getElementsByName("a")[1].checked) === true){
+    if (arrOfAnswer[1] === "true" ) {
+        document.getElementById("first2muil").style.background = "#228B22"
+        document.getElementById("first2muil").style.transition = "2s"
+
+    } else {document.getElementById("first2muil").style.background = "#B22222"
+    document.getElementById("first2muil").style.transition = "2s"
+
+
+}
+}
+
+if ((document.getElementsByName("a")[2].checked) === true){
+    if (arrOfAnswer[2] === "true" ) {
+        document.getElementById("first3muil").style.background = "#228B22"
+        document.getElementById("first3muil").style.transition = "2s"
+
+    } else {document.getElementById("first3muil").style.background = "#B22222"
+    document.getElementById("first3muil").style.transition = "2s"
+
+
+}
+}
+
+
+if ((document.getElementsByName("a")[3].checked) === true){
+    if (arrOfAnswer[3] === "true" ) {
+        document.getElementById("first4muil").style.background = "#228B22"
+        document.getElementById("first4muil").style.transition = "2s"
+
+    } else {document.getElementById("first4muil").style.background = "#B22222"
+    document.getElementById("first4muil").style.transition = "2s"
+
+
+}
+}
+
 
 document.getElementById("button2").style.display = "none";
 document.getElementById("button1").style.display = "inline-block";
