@@ -17,7 +17,7 @@ input {
     background-position:center ;
     margin: auto; 
    padding-bottom: 15px;
-    background-color: #293777
+    background-color: #171f41
     ;
 
 }
@@ -25,7 +25,8 @@ input {
 
     margin: 75px 0px 0px 220px;
     padding: 20px;
-    border: 2px solid #4169E1;
+    border: 2px solid #228B22;
+    background-color: #228B22;
     border-radius: 40%;
     text-align: center;
     width: 40%;
@@ -53,6 +54,8 @@ input {
     border: 2px solid #4169E1;
     padding: 10px 20px;
     border-radius: 10px;
+    background-color: #5773c9;
+
     
     color: #F5FFFA ;
 
@@ -66,8 +69,10 @@ input {
     color: #F5FFFA ;
     font-style: italic;
 
+}
 
-
+#showMulti {
+    display: none;
 }
 
 .multipul {
@@ -93,6 +98,7 @@ input {
 
 #aaaaa, #bbbbb, #cccccc, #dddddd {
     font-style: italic;
+    color: white;
 }
 
 
@@ -108,14 +114,18 @@ input {
     margin: auto;
     width: 100px;
     height: 50px;
-    background-color: #272e8b;
+    background-color: #228B22;
     padding: 5px;
-    border: 2px solid #4169E1;
+    border: 2px solid #228B22;
     border-radius: 8px;
 }
 
 #button2 {
     display: none;
+}
+
+#button1 {
+    margin-top: 35px;
 }
 
 a {
@@ -124,9 +134,9 @@ a {
     margin: auto;
     width: 95px;
     height: 37px;
-    background-color: #272e8b;
+    background-color: #228B22;
     padding: 5px;
-    border: 2px solid #4169E1;
+    border: 2px solid #228B22;
     border-radius: 8px;
     text-decoration: none;
     font-size: xx-large;

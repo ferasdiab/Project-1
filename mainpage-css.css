@@ -68,6 +68,10 @@
     color: white
 }
 
+h1 {
+    margin-bottom: 30px;
+}
+
 
 
 .quizlist ul li {
@@ -77,7 +81,10 @@
     position: relative;
     color: wheat;
     width : 30%;
-    height: 80px;
+    height: 40px;
+    border: 2px solid wheat ;
+    margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .quizlist ul li a {

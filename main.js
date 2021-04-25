@@ -46,6 +46,9 @@ const nextQA = () => {
 
 if (counter !== qu.length ){
 
+    document.getElementById("showMulti").style.display = "block"
+
+
     document.getElementById("button2").style.display = "inline-block";
 
     document.getElementById("first1muil").style.background = "#6a94e4"
@@ -57,6 +60,11 @@ if (counter !== qu.length ){
     document.getElementById("first2muil").style.transition = "0s"
     document.getElementById("first3muil").style.transition = "0s"
     document.getElementById("first4muil").style.transition = "0s"
+
+document.getElementsByName("a")[0].checked = false
+document.getElementsByName("a")[1].checked = false
+document.getElementsByName("a")[2].checked = false
+document.getElementsByName("a")[3].checked = false
 
 
 
@@ -229,10 +237,7 @@ for (let i = 0 ; i < arrOfAnswer.length ; i++){
     }
 }
 
-document.getElementsByName("a")[0].checked = false
-document.getElementsByName("a")[1].checked = false
-document.getElementsByName("a")[2].checked = false
-document.getElementsByName("a")[3].checked = false
+
 
 
 document.getElementById("button2").style.display = "none";

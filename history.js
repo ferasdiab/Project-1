@@ -5,11 +5,12 @@ let q3 = "When did the Soviet economy collapse? ?"
 let q4 = "In what Hijri years did the Prophet Muhammad die ?"
 let q5 = "How old was the Prophet Muhammad when he died ? "
 
-const qu = [{qu : q1 , miltiOption : { first : {name : "1430" , stats : false} , second : {name : "1442" , stats : true } , third : {name : "1440" , stats : false} , forth : { name : "1450" , stats : false}} } ,
- {qu : q2 , miltiOption : {first : {name : "1944" , stats : false} , second : {name : "1919" , stats : false} , third : {name : "1935" , stats : false} , forth : {name : "1945" , stats : true}}  } , 
- {qu : q3  , miltiOption: {first : {name : "1985" , stats : false} , second : {name : "1950" , stats : false} , third : {name : "1991" , stats : true} , forth : {name : "1980" , stats : false}}} ,
+const qu = [{qu : q1 , miltiOption : { first : {name : "1430" , stats : false} , second : {name : "1440" , stats : false } , third : {name : "1442" , stats : true} , forth : { name : "1450" , stats : false}} } ,
+ {qu : q2 , miltiOption : {first : {name : "1940" , stats : false} , second : {name : "1945" , stats : true} , third : {name : "1948" , stats : false} , forth : {name : "1955" , stats : false}}  } , 
+ {qu : q3  , miltiOption: {first : {name : "1950" , stats : false} , second : {name : "1985" , stats : false} , third : {name : "1991" , stats : true} , forth : {name : "1999" , stats : false}}} ,
 {qu : q4 , miltiOption : {first : {name : "10" , stats : false} , second : {name : "11" , stats : true} , third :{name : "12" , stats : false}   , forth : {name : "13" , stats : false}  } } ,
 {qu : q5 , miltiOption : {first : {name : "60" , stats : false} , second : {name : "61" , stats : false} , third :{name : "62" , stats : false}   , forth : {name : "63 " , stats : true}  } }   ]
+
 
 
 let counter = 0
@@ -45,6 +46,9 @@ const nextQA = () => {
 
 if (counter !== qu.length ){
 
+    document.getElementById("showMulti").style.display = "block"
+
+
     document.getElementById("button2").style.display = "inline-block";
 
     document.getElementById("first1muil").style.background = "#6a94e4"
@@ -56,6 +60,11 @@ if (counter !== qu.length ){
     document.getElementById("first2muil").style.transition = "0s"
     document.getElementById("first3muil").style.transition = "0s"
     document.getElementById("first4muil").style.transition = "0s"
+
+document.getElementsByName("a")[0].checked = false
+document.getElementsByName("a")[1].checked = false
+document.getElementsByName("a")[2].checked = false
+document.getElementsByName("a")[3].checked = false
 
 
 
@@ -228,10 +237,7 @@ for (let i = 0 ; i < arrOfAnswer.length ; i++){
     }
 }
 
-document.getElementsByName("a")[0].checked = false
-document.getElementsByName("a")[1].checked = false
-document.getElementsByName("a")[2].checked = false
-document.getElementsByName("a")[3].checked = false
+
 
 
 document.getElementById("button2").style.display = "none";

@@ -7,9 +7,10 @@ let q5 = "In which country will the 2022 World Cup be? "
 
 const qu = [{qu : q1 , miltiOption : { first : {name : "Brazil" , stats : false} , second : {name : "Argentina" , stats : false } , third : {name : "Uruguay" , stats : true} , forth : { name : "Germany" , stats : false}} } ,
  {qu : q2 , miltiOption : {first : {name : "Cristiano Ronaldo" , stats : false} , second : {name : "Pelé‏" , stats : false} , third : {name : "Lionel Messi " , stats : true} , forth : {name : "Ronaldo" , stats : false}}  } , 
- {qu : q3  , miltiOption: {first : {name : "Brazil" , stats : true} , second : {name : "Germany" , stats : false} , third : {name : "Argentina" , stats : false} , forth : {name : "france" , stats : false}}} ,
-{qu : q4 , miltiOption : {first : {name : "Basketball" , stats : false} , second : {name : "baseball" , stats : true} , third :{name : "football" , stats : false}   , forth : {name : "none" , stats : false}  } } ,
+ {qu : q3  , miltiOption: {first : {name : "Brazil" , stats : true} , second : {name : "Germany" , stats : false} , third : {name : "Argentina" , stats : false} , forth : {name : "France" , stats : false}}} ,
+{qu : q4 , miltiOption : {first : {name : "Basketball" , stats : false} , second : {name : "Baseball" , stats : true} , third :{name : "Football" , stats : false}   , forth : {name : "none" , stats : false}  } } ,
 {qu : q5 , miltiOption : {first : {name : "Italy" , stats : false} , second : {name : "Qatar" , stats : true} , third :{name : "Russia" , stats : false}   , forth : {name : "France " , stats : false}  } }   ]
+
 
 
 
@@ -46,6 +47,9 @@ const nextQA = () => {
 
 if (counter !== qu.length ){
 
+    document.getElementById("showMulti").style.display = "block"
+
+
     document.getElementById("button2").style.display = "inline-block";
 
     document.getElementById("first1muil").style.background = "#6a94e4"
@@ -57,6 +61,11 @@ if (counter !== qu.length ){
     document.getElementById("first2muil").style.transition = "0s"
     document.getElementById("first3muil").style.transition = "0s"
     document.getElementById("first4muil").style.transition = "0s"
+
+document.getElementsByName("a")[0].checked = false
+document.getElementsByName("a")[1].checked = false
+document.getElementsByName("a")[2].checked = false
+document.getElementsByName("a")[3].checked = false
 
 
 
@@ -229,10 +238,7 @@ for (let i = 0 ; i < arrOfAnswer.length ; i++){
     }
 }
 
-document.getElementsByName("a")[0].checked = false
-document.getElementsByName("a")[1].checked = false
-document.getElementsByName("a")[2].checked = false
-document.getElementsByName("a")[3].checked = false
+
 
 
 document.getElementById("button2").style.display = "none";
