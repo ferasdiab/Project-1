@@ -1,14 +1,14 @@
 
 let q1 = "first country that won the World Cup "
-let q2 = "most player won the Ballon d'Or is "
-let q3 = "most country won World Cups is  "
+let q2 = "Most player won the Ballon d'Or is "
+let q3 = "Most country won World Cups is  "
 let q4 = "The most popular sport in USA is "
 let q5 = "In which country will the 2022 World Cup be? "
 
 const qu = [{qu : q1 , miltiOption : { first : {name : "Brazil" , stats : false} , second : {name : "Argentina" , stats : false } , third : {name : "Uruguay" , stats : true} , forth : { name : "Germany" , stats : false}} } ,
  {qu : q2 , miltiOption : {first : {name : "Cristiano Ronaldo" , stats : false} , second : {name : "Pelé‏" , stats : false} , third : {name : "Lionel Messi " , stats : true} , forth : {name : "Ronaldo" , stats : false}}  } , 
  {qu : q3  , miltiOption: {first : {name : "Brazil" , stats : true} , second : {name : "Germany" , stats : false} , third : {name : "Argentina" , stats : false} , forth : {name : "France" , stats : false}}} ,
-{qu : q4 , miltiOption : {first : {name : "Basketball" , stats : false} , second : {name : "Baseball" , stats : true} , third :{name : "Football" , stats : false}   , forth : {name : "none" , stats : false}  } } ,
+{qu : q4 , miltiOption : {first : {name : "Basketball" , stats : false} , second : {name : "Baseball" , stats : true} , third :{name : "Football" , stats : false}   , forth : {name : "None" , stats : false}  } } ,
 {qu : q5 , miltiOption : {first : {name : "Italy" , stats : false} , second : {name : "Qatar" , stats : true} , third :{name : "Russia" , stats : false}   , forth : {name : "France " , stats : false}  } }   ]
 
 
@@ -42,7 +42,7 @@ const score = document.querySelector(".score");
 
 
 
-
+let timeDown = 0
 const nextQA = () => {
 
 if (counter !== qu.length ){
@@ -84,18 +84,13 @@ option4stats.value = qu[counter].miltiOption.forth.stats;
 
 
 
-console.log( option1stats.value)
-console.log( option2stats.value)
-console.log(option3stats.value )
-console.log(option4stats.value )
-console.log("end")
-
 document.getElementById("button1").style.display = "none";
 
 if (counter === 0) {
 
     let timer = 60
-    const timeDown = setInterval(function(){
+    timeDown = setInterval(function(){
+    
     document.getElementById("timer").innerHTML = `${timer} second left`
     
     --timer
@@ -104,7 +99,6 @@ if (counter === 0) {
         clearInterval(timeDown);
     
     body.remove();
-    score.innerHTML = `YOUR SCORE IS <br>${theScore} OF ${qu.length}`
     document.getElementById("result").style.position = "relative";
     document.getElementById("result").style.top = "50%";
     document.getElementById("result").style.width = "350px"
@@ -112,13 +106,19 @@ if (counter === 0) {
     document.getElementById("result").style.margin = "auto"
     document.getElementById("result").style.marginTop = "25px"
     document.getElementById("result").style.padding = "10px"
-    document.getElementById("result").style.border = "2px solid"
     document.getElementById("result").style.textAlign = "center"
     document.getElementById("home").style.display = "block"
-
-
-
     document.getElementById("timer").remove();
+
+    if (!localStorage.getItem("highScoreSprtQiz")) {
+        localStorage.setItem("highScoreSprtQiz",`${theScore}`)
+    } else {
+        if (`${theScore}` > localStorage.getItem("highScoreSprtQiz") ) {
+            localStorage.setItem("highScoreSprtQiz",`${theScore}`)
+        }
+    }
+    score.innerHTML = `Your Score  <br>${theScore} OF ${qu.length}<br><br><br> High Score  <br> ${localStorage.getItem("highScoreSprtQiz")} OF ${qu.length} `
+
     }
     
      }, 1000);
@@ -126,22 +126,28 @@ if (counter === 0) {
 
 
 } else {
+    clearInterval(timeDown);
     body.remove();
-    score.innerHTML = `YOUR SCORE IS <br>${theScore} OF ${qu.length}`
+
     document.getElementById("result").style.position = "relative";
     document.getElementById("result").style.top = "50%";
-    document.getElementById("result").style.width = "350px"
-    document.getElementById("result").style.height = "100px"
-    document.getElementById("result").style.margin = "auto"
-    document.getElementById("result").style.marginTop = "25px"
-    document.getElementById("result").style.padding = "10px"
-    document.getElementById("result").style.border = "2px solid"
-    document.getElementById("result").style.textAlign = "center"
-    document.getElementById("home").style.display = "block"
-
-
-
+    document.getElementById("result").style.width = "350px";
+    document.getElementById("result").style.height = "100px";
+    document.getElementById("result").style.margin = "auto";
+    document.getElementById("result").style.marginTop = "25px";
+    document.getElementById("result").style.padding = "10px";
+    document.getElementById("result").style.textAlign = "center";
+    document.getElementById("home").style.display = "block";
     document.getElementById("timer").remove();
+
+    if (!localStorage.getItem("highScoreSprtQiz")) {
+        localStorage.setItem("highScoreSprtQiz",`${theScore}`)
+    } else {
+        if (`${theScore}` > localStorage.getItem("highScoreSprtQiz") ) {
+            localStorage.setItem("highScoreSprtQiz",`${theScore}`)
+        }
+    }
+    score.innerHTML = `Your Score  <br>${theScore} OF ${qu.length}<br><br><br> High Score  <br> ${localStorage.getItem("highScoreSprtQiz")} OF ${qu.length} `
 
 
 

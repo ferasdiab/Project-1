@@ -1,7 +1,7 @@
 
 let q1 = "Now in what Hijri year we are  ?"
 let q2 = "World War II ended in which year ?"
-let q3 = "When did the Soviet economy collapse? ?"
+let q3 = "When did the Soviet Union collapse ?"
 let q4 = "In what Hijri years did the Prophet Muhammad die ?"
 let q5 = "How old was the Prophet Muhammad when he died ? "
 
@@ -41,7 +41,7 @@ const score = document.querySelector(".score");
 
 
 
-
+let timeDown = 0
 const nextQA = () => {
 
 if (counter !== qu.length ){
@@ -83,18 +83,13 @@ option4stats.value = qu[counter].miltiOption.forth.stats;
 
 
 
-console.log( option1stats.value)
-console.log( option2stats.value)
-console.log(option3stats.value )
-console.log(option4stats.value )
-console.log("end")
-
 document.getElementById("button1").style.display = "none";
 
 if (counter === 0) {
 
     let timer = 60
-    const timeDown = setInterval(function(){
+    timeDown = setInterval(function(){
+    
     document.getElementById("timer").innerHTML = `${timer} second left`
     
     --timer
@@ -103,7 +98,6 @@ if (counter === 0) {
         clearInterval(timeDown);
     
     body.remove();
-    score.innerHTML = `YOUR SCORE IS <br>${theScore} OF ${qu.length}`
     document.getElementById("result").style.position = "relative";
     document.getElementById("result").style.top = "50%";
     document.getElementById("result").style.width = "350px"
@@ -111,13 +105,19 @@ if (counter === 0) {
     document.getElementById("result").style.margin = "auto"
     document.getElementById("result").style.marginTop = "25px"
     document.getElementById("result").style.padding = "10px"
-    document.getElementById("result").style.border = "2px solid"
     document.getElementById("result").style.textAlign = "center"
     document.getElementById("home").style.display = "block"
-
-
-
     document.getElementById("timer").remove();
+
+    if (!localStorage.getItem("highScoreHestoryQiz")) {
+        localStorage.setItem("highScoreHestoryQiz",`${theScore}`)
+    } else {
+        if (`${theScore}` > localStorage.getItem("highScoreHestoryQiz") ) {
+            localStorage.setItem("highScoreHestoryQiz",`${theScore}`)
+        }
+    }
+    score.innerHTML = `Your Score  <br>${theScore} OF ${qu.length}<br><br><br> High Score  <br> ${localStorage.getItem("highScoreHestoryQiz")} OF ${qu.length} `
+
     }
     
      }, 1000);
@@ -125,22 +125,28 @@ if (counter === 0) {
 
 
 } else {
+    clearInterval(timeDown);
     body.remove();
-    score.innerHTML = `YOUR SCORE IS <br>${theScore} OF ${qu.length}`
+
     document.getElementById("result").style.position = "relative";
     document.getElementById("result").style.top = "50%";
-    document.getElementById("result").style.width = "350px"
-    document.getElementById("result").style.height = "100px"
-    document.getElementById("result").style.margin = "auto"
-    document.getElementById("result").style.marginTop = "25px"
-    document.getElementById("result").style.padding = "10px"
-    document.getElementById("result").style.border = "2px solid"
-    document.getElementById("result").style.textAlign = "center"
-    document.getElementById("home").style.display = "block"
-
-
-
+    document.getElementById("result").style.width = "350px";
+    document.getElementById("result").style.height = "100px";
+    document.getElementById("result").style.margin = "auto";
+    document.getElementById("result").style.marginTop = "25px";
+    document.getElementById("result").style.padding = "10px";
+    document.getElementById("result").style.textAlign = "center";
+    document.getElementById("home").style.display = "block";
     document.getElementById("timer").remove();
+
+    if (!localStorage.getItem("highScoreHestoryQiz")) {
+        localStorage.setItem("highScoreHestoryQiz",`${theScore}`)
+    } else {
+        if (`${theScore}` > localStorage.getItem("highScoreHestoryQiz") ) {
+            localStorage.setItem("highScoreHestoryQiz",`${theScore}`)
+        }
+    }
+    score.innerHTML = `Your Score  <br>${theScore} OF ${qu.length}<br><br><br> High Score  <br> ${localStorage.getItem("highScoreHestoryQiz")} OF ${qu.length} `
 
 
 

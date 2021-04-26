@@ -35,7 +35,6 @@
 
 .navbar ul li a {
     text-decoration: none;
-    color: rgb(7, 3, 3);
     text-transform: uppercase;
 }
 
@@ -44,7 +43,7 @@
     content: "";
     height: 3px;    
     width: 0;
-    background:green;
+    background:wheat;
     position: absolute;
     left: 0;
     bottom: -10px;  
@@ -55,10 +54,15 @@
     content: "";
     height: 3px;    
     width: 100%;
-    background:green;
+    background:wheat;
     position: absolute;
     left: 0;
     bottom: -10px;  
+}
+
+.navConntain {
+    color: wheat;
+    font-size: large
 }
 
 .content {
