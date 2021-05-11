@@ -10,7 +10,7 @@ input {
     
 }
 .continer {
-    border: 4px solid #324180;
+    border: 4px solid wheat;
     border-radius: 10px;
     width: 50%;
     height: 60%;
@@ -19,7 +19,6 @@ input {
     background-position:center ;
     margin: auto; 
     padding-bottom: 15px;
-    background-color: #324180;
     margin-top: 5%;
 
 
@@ -32,10 +31,11 @@ input {
     padding: 20px;
     border: 2px solid #228B22;
     background-color: #228B22;
-    border-radius: 40%;
+    border-radius: 10px;
     text-align: center;
     width: 40%;
     color: aliceblue ;
+    font-size: large;
 }
 
 
@@ -46,7 +46,7 @@ input {
     text-align: center;
     font-size: x-large;
     font-style: italic;
-    color: rgb(20, 163, 51);
+    color:wheat;
    
 }
 
@@ -144,13 +144,12 @@ a {
     margin: auto;
     width: 95px;
     height: 37px;
-    background-color: #228B22;
     padding: 5px;
-    border: 2px solid #228B22;
+    border: 2px solid wheat;
     border-radius: 8px;
     text-decoration: none;
     font-size: xx-large;
-    color: #F5FFFA ;
+    color: wheat ;
     margin-top: 100px;
 
 }
